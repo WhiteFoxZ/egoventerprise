@@ -1,3 +1,12 @@
+CREATE SCHEMA `egoventerprise` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+
+CREATE USER 'egoventerprise'@'localhost' IDENTIFIED BY 'egoventerprise';
+GRANT USAGE ON *.* TO 'egoventerprise'@'localhost';
+GRANT EXECUTE, SELECT, SHOW VIEW, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, CREATE TEMPORARY TABLES, CREATE VIEW, DELETE, DROP, EVENT, INDEX, INSERT, REFERENCES, TRIGGER, UPDATE, LOCK TABLES  ON `egoventerprise`.* TO 'egoventerprise'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'egoventerprise'@'localhost';
+
+
 
 
 CREATE TABLE IDS (
